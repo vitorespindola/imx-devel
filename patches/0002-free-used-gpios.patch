@@ -1,0 +1,20 @@
+--- a/arch/arm/mach-mx5/mx53_loco.c	2019-06-14 14:59:13.356346694 +0000
++++ b/arch/arm/mach-mx5/mx53_loco.c	2019-06-14 14:59:27.376335121 +0000
+@@ -84,8 +84,6 @@
+ #define FEC_INT				(1*32 + 4)	/* GPIO_2_4 */
+ #define HEADPHONE_DEC_B		(1*32 + 5)	/* GPIO_2_5 */
+ #define MIC_DEC_B			(1*32 + 6)	/* GPIO_2_6 */
+-#define USER_UI1			(1*32 + 14)	/* GPIO_2_14 */
+-#define USER_UI2			(1*32 + 15)	/* GPIO_2_15 */
+ #define MX53_nONKEY			(0*32 + 8)	/* GPIO_1_8 */
+ 
+ #define SD3_CD				(2*32 + 11)	/* GPIO_3_11 */
+@@ -689,8 +687,6 @@
+ 
+ static struct gpio_keys_button loco_buttons[] = {
+ 	GPIO_BUTTON(MX53_nONKEY, KEY_POWER, 1, "power", 0),
+-	GPIO_BUTTON(USER_UI1, KEY_VOLUMEUP, 1, "volume-up", 0),
+-	GPIO_BUTTON(USER_UI2, KEY_VOLUMEDOWN, 1, "volume-down", 0),
+ };
+ 
+ static struct gpio_keys_platform_data loco_button_data = {
