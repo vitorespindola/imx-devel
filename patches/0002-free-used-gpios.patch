@@ -1,5 +1,5 @@
---- a/arch/arm/mach-mx5/mx53_loco.c	2019-06-14 14:59:13.356346694 +0000
-+++ b/arch/arm/mach-mx5/mx53_loco.c	2019-06-14 14:59:27.376335121 +0000
+--- a/arch/arm/mach-mx5/mx53_loco.c	2019-07-01 18:53:03.681435678 +0000
++++ b/arch/arm/mach-mx5/mx53_loco.c	2019-07-01 20:06:11.596144997 +0000
 @@ -84,8 +84,6 @@
  #define FEC_INT				(1*32 + 4)	/* GPIO_2_4 */
  #define HEADPHONE_DEC_B		(1*32 + 5)	/* GPIO_2_5 */
@@ -18,3 +18,14 @@
  };
  
  static struct gpio_keys_platform_data loco_button_data = {
+@@ -875,10 +871,6 @@
+ 	msleep(1);
+ 	gpio_set_value(FEC_RST, 1);
+ 
+-	/* headphone_det_b */
+-	gpio_request(HEADPHONE_DEC_B, "headphone-dec");
+-	gpio_direction_input(HEADPHONE_DEC_B);
+-
+ 	/* USB PWR enable */
+ 	gpio_request(USB_PWREN, "usb-pwr");
+ 	gpio_direction_output(USB_PWREN, 0);
