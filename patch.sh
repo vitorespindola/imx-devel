@@ -52,6 +52,7 @@ cleanup () {
 
 bugs_trivial () {
 	echo "bugs and trivial stuff"
+	git apply "${DIR}/patches/0003-fix-timeconst.patch"
 }
 
 freescale () {
