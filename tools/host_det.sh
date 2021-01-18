@@ -252,7 +252,7 @@ debian_regs () {
 			unset error_unknown_deb_distro
 			unset warn_eol_distro
 			;;
-		lucid|precise|quantal|raring|saucy|trusty|bionic)
+		lucid|precise|quantal|raring|saucy|trusty|bionic|buster)
 			#Supported Ubuntu:
 			unset error_unknown_deb_distro
 			unset warn_eol_distro
@@ -303,7 +303,7 @@ debian_regs () {
 
 		#Libs; starting with jessie/sid/saucy, lib<pkg_name>-dev:<arch>
 		case "${deb_distro}" in
-		jessie|sid|saucy|trusty|bionic)
+		jessie|sid|saucy|trusty|bionic|buster)
 			pkg="libncurses5-dev:${deb_arch}"
 			check_dpkg
 			;;
